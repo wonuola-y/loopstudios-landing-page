@@ -1,0 +1,58 @@
+@use "total" as *;
+
+
+@mixin flex  {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1em;
+}
+@mixin flexMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+body{
+    margin: 0;
+}
+h1
+    {
+        font-size: $h1 ;
+        border: $border;
+    }
+.header{
+    background: url(/images/mobile/image-hero.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+
+    width: $widthcent;
+    
+    height: 60vh;
+
+    nav{
+        padding: $p;
+        padding-top:2em;
+        @include flex;
+       
+    }
+    .nav-list{
+        display: none;
+    }
+    .ham{
+        width: 25px;
+        height: 15px;
+
+    }
+    .logo{
+        width: 40%;
+    }
+    h1{
+        margin: 0;
+        @include generic;
+        justify-content: left;
+        text-transform: uppercase;
+        font-weight: $fontWeight1;
+        color: $White;
+        border: 2px solid white;
+    }
+}

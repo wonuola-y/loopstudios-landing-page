@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  border: 2px solid blue;
+}
+
+.header {
+  background: url(/images/mobile/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh;
+}
+.header nav {
+  padding: 1em;
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1em;
+}
+.header .nav-list {
+  display: none;
+}
+.header .ham {
+  width: 25px;
+  height: 15px;
+}
+.header .logo {
+  width: 40%;
+}
+.header h1 {
+  margin: 0;
+  margin: 1em;
+  padding: 1em;
+  justify-content: left;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: hsl(0deg, 0%, 100%);
+  border: 2px solid white;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+//Primary colors
+$White : hsl(0, 0%, 100%);
+$Black : hsl(0, 0%, 0%);
+$Gray : hsl(0, 0%, 55%);
+$DarkGray : hsl(0, 0%, 41%);
+
+//Font size;
+$p : 1em;
+$h1 : 2em;
+$h2 : 1.5em;
+
+//font weight
+$fontWeight1 : 300;
+$fontWeight2 : 400;
+$border : 2px solid blue;
+
+//measurements
+$widthcent : 100%;
+$widthvw : 100vw;
+
+@mixin generic {
+    margin: 1em;
+    padding: 1em;
+}
