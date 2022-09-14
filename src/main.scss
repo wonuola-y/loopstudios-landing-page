@@ -1,58 +1,161 @@
 @use "total" as *;
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
 
-
-@mixin flex  {
-    display: flex;
-    justify-content: space-between;
-    line-height: 1em;
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1em;
+}
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+  border: 2px solid green;
 }
 @mixin flexMain {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+  align-items: center;
+
 }
-body{
+@mixin bg {
+
+background-size: 100% ;
+background-repeat: no-repeat;
+
+}
+%Contentlist {
+  display: flex;
+// border: $border;
+padding: 1em;
+  align-items: flex-end;
+  height: 10vh;
+  color: white;
+  margin: .8em 1em;
+  font-weight: 300;
+  font-size: $h2;
+  text-transform: uppercase;
+  width: 85%;
+
+}
+body {
+  margin: 0;
+
+}
+
+.header {
+  background: url(/images/mobile/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: $widthcent;
+  height: 60vh;
+
+  nav {
+    padding: $p;
+    padding-top: 2em;
+    @include flex;
+  }
+  .nav-list {
+    display: none;
+  }
+  .ham {
+    width: 25px;
+    height: 15px;
+  }
+  .logo {
+    width: 40%;
+  }
+  h1 {
     margin: 0;
+
+    justify-content: left;
+    text-transform: uppercase;
+    font-weight: $fontWeight1;
+    color: $White;
+    border: 2px solid white;
+  }
 }
-h1
-    {
-        font-size: $h1 ;
-        border: $border;
-    }
-.header{
-    background: url(/images/mobile/image-hero.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
+.main-section {
+  @include flexDirection(column);
+  margin-top: 3em;
+  
 
-    width: $widthcent;
-    
-    height: 60vh;
-
-    nav{
-        padding: $p;
-        padding-top:2em;
-        @include flex;
-       
-    }
-    .nav-list{
-        display: none;
-    }
-    .ham{
-        width: 25px;
-        height: 15px;
-
-    }
-    .logo{
-        width: 40%;
-    }
-    h1{
-        margin: 0;
-        @include generic;
-        justify-content: left;
-        text-transform: uppercase;
-        font-weight: $fontWeight1;
-        color: $White;
-        border: 2px solid white;
-    }
 }
+.first-div {
+    text-align: center;
+    padding: $p;
+    h1 {
+      font-weight: $fontWeight1;
+      font-size: $h1;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: $p;
+      font-family: 'Alata';
+    }
+    img {
+      width: 80%;
+    }
+  }
+  .second-div{
+    @include flexDirection(column);
+    .button{
+        width: $widthcent;
+        @include flexMain;
+        height: 0;
+
+        
+    }
+
+    .deep{
+        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-deep-earth.jpg);
+        @include bg;
+        @extend %Contentlist;
+    }
+    .night{
+        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-night-arcade.jpg);
+        @include bg;
+        @extend %Contentlist;
+    }
+    .soccer{
+        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-soccer-team.jpg);
+        @include bg;
+        @extend %Contentlist;
+    }
+    .grid{
+        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-grid.jpg);
+        @include bg;
+        @extend %Contentlist;
+    }
+    .vr{
+        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-from-above.jpg);
+        @include bg;
+        @extend %Contentlist;
+    }
+    .pocket{
+        background:  linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-pocket-borealis.jpg);
+        @include bg;
+        @extend %Contentlist;
+        
+    }
+    .curiosity{
+        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-curiosity.jpg);
+        @include bg;
+        @extend %Contentlist;
+    }
+    .fish{
+        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-fisheye.jpg), linear-gradient(-90deg, $Black, $White );
+        @include bg;
+      @extend %Contentlist
+    }
+    li{
+        width: 100%;
+        list-style: none;
+    }
+    ul{
+      @include flexMain;
+        border: 2px solid pink;
+        width: 100%;
+        padding: 0;
+    }
+  }
