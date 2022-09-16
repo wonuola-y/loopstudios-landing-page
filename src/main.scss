@@ -1,21 +1,21 @@
 @use "total" as *;
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
 
 @mixin flex {
   display: flex;
   justify-content: space-between;
   line-height: 1em;
 }
-@mixin flexDirection($direction) {
-  display: flex;
-  flex-direction: $direction;
-  border: 2px solid green;
-}
-@mixin flexMain {
+@mixin flexDirection {
   display: flex;
   flex-direction: column;
- justify-content: center;
-  align-items: center;
+}
+
+@mixin flexMain ($position, $direction) {
+  display: flex;
+  flex-direction: $direction;
+ justify-content: $position;
+  align-items: $position;
 
 }
 @mixin bg {
@@ -26,7 +26,6 @@ background-repeat: no-repeat;
 }
 %Contentlist {
   display: flex;
-// border: $border;
 padding: 1em;
   align-items: flex-end;
   height: 10vh;
@@ -36,20 +35,24 @@ padding: 1em;
   font-size: $h2;
   text-transform: uppercase;
   width: 85%;
-
+font-family: $font-family1;
 }
 body {
   margin: 0;
 
 }
-
+h1{
+  font-weight: $fontWeight1;
+  font-family: $font-family1;
+}
 .header {
   background: url(/images/mobile/image-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: $widthcent;
-  height: 60vh;
-
+  height: 65vh;
+  @include flexDirection;
+ 
   nav {
     padding: $p;
     padding-top: 2em;
@@ -66,17 +69,27 @@ body {
     width: 40%;
   }
   h1 {
+    
     margin: 0;
-
+    width: 80%;
     justify-content: left;
     text-transform: uppercase;
-    font-weight: $fontWeight1;
+
     color: $White;
-    border: 2px solid white;
+    padding: .8em .8em;
+    border: 1px solid white;
+  }
+  .h1{
+    height: 50vh;
+    margin: 0em 1em;
+
+
+@include flexMain(center, column);
+align-items: flex-start;
   }
 }
 .main-section {
-  @include flexDirection(column);
+  @include flexDirection;
   margin-top: 3em;
   
 
@@ -92,59 +105,82 @@ body {
     p {
       font-size: $p;
       font-family: 'Alata';
+      color: $DarkGray;
     }
     img {
       width: 80%;
     }
   }
   .second-div{
-    @include flexDirection(column);
-    .button{
-        width: $widthcent;
-        @include flexMain;
-        height: 0;
+    @include flexDirection;
+        h1{
+      text-transform: uppercase;
+      text-align: center;
+    }
 
-        
+    .button{
+margin: 1em 1em;
+padding: 1em;
+@include flexMain(center, column );
+button{
+  border: 2px solid black;
+  width: 40%;
+  background: white;
+  font-family: $font-family2;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  padding: .6em;
+}     
+    }
+    button:hover{
+background-color: black;
+color: white;
+border:none;
+transition: ease-in-out .1s;
+    }
+    .creations > li:hover{
+   opacity: .4;
+   transition: ease-in-out .1s;
     }
 
     .deep{
-        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-deep-earth.jpg);
+        background: linear-gradient(-90deg,$Whitegradient, $BlackGradient ), url(/images/mobile/image-deep-earth.jpg);
         @include bg;
         @extend %Contentlist;
     }
     .night{
-        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-night-arcade.jpg);
+        background: linear-gradient(-90deg,$Whitegradient, $BlackGradient ), url(/images/mobile/image-night-arcade.jpg);
         @include bg;
         @extend %Contentlist;
     }
     .soccer{
-        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-soccer-team.jpg);
+        background: linear-gradient(-90deg,$Whitegradient, $BlackGradient ), url(/images/mobile/image-soccer-team.jpg);
         @include bg;
         @extend %Contentlist;
     }
     .grid{
-        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-grid.jpg);
+        background: linear-gradient(-90deg,$Whitegradient, $BlackGradient ), url(/images/mobile/image-grid.jpg);
         @include bg;
         @extend %Contentlist;
     }
     .vr{
-        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-from-above.jpg);
+        background: linear-gradient(-90deg,$Whitegradient, $BlackGradient ), url(/images/mobile/image-from-above.jpg);
         @include bg;
         @extend %Contentlist;
     }
     .pocket{
-        background:  linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-pocket-borealis.jpg);
+        background:  linear-gradient(-90deg,$Whitegradient, $BlackGradient ), url(/images/mobile/image-pocket-borealis.jpg);
         @include bg;
         @extend %Contentlist;
         
     }
     .curiosity{
-        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-curiosity.jpg);
+        background: linear-gradient(-90deg,$Whitegradient, $BlackGradient ), url(/images/mobile/image-curiosity.jpg);
         @include bg;
         @extend %Contentlist;
     }
     .fish{
-        background: linear-gradient(-90deg,$Whitegradient, $Black ), url(/images/mobile/image-fisheye.jpg), linear-gradient(-90deg, $Black, $White );
+        background: linear-gradient(-90deg,$Whitegradient, $BlackGradient ), url(/images/mobile/image-fisheye.jpg), linear-gradient(-90deg, $Black, $White );
         @include bg;
       @extend %Contentlist
     }
@@ -153,9 +189,39 @@ body {
         list-style: none;
     }
     ul{
-      @include flexMain;
-        border: 2px solid pink;
+     
+      @include flexMain(center, column);
         width: 100%;
         padding: 0;
     }
+  }
+  footer{
+    background-color: $Black;
+    color: $White;
+    ul{
+      @include flexMain(center, column);
+      justify-content: center;
+    }
+    ul > li{
+      font-family: $font-family2;
+      margin: .7em;
+    }
+    .icons{
+flex-direction: row;
+
+    }
+    ul > li:hover{
+      border-bottom: 3px solid white;
+      transition: ease-in-out, 2s;
+    }
+    em {
+      @include flexMain(center,column );
+      color: $DarkGray;
+      font-style: normal;
+    }
+
+  }
+  li{
+  
+    list-style: none;
   }
