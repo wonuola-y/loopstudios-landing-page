@@ -1,0 +1,598 @@
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+  h1 {
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .header {
+    background: url(/images/mobile/image-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .header .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1em;
+    padding: 1em;
+    padding-top: 2em;
+  }
+  .header .nav-list {
+    display: none;
+    position: absolute;
+    background-color: hsl(0deg, 0%, 0%);
+    color: hsl(0deg, 0%, 100%);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .header .nav-list > ul {
+    margin-top: 4em;
+    text-transform: uppercase;
+  }
+  .header .nav-list > ul > li {
+    margin: 2em 0;
+  }
+  .header .nav-imgs {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+  }
+  .header .close {
+    width: 20px;
+    height: 20px;
+  }
+  .header .logo-menu {
+    width: 120px;
+  }
+  .header .animate {
+    animation: spin 0.03s linear 1;
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .header .ham {
+    width: 25px;
+    height: 15px;
+  }
+  .header .logo {
+    width: 40%;
+  }
+  .header h1 {
+    margin: 0;
+    width: 80%;
+    justify-content: left;
+    text-transform: uppercase;
+    color: hsl(0deg, 0%, 100%);
+    padding: 0.8em 0.8em;
+    border: 1px solid white;
+  }
+  .header .h1 {
+    height: 50vh;
+    margin: 0em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+  }
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+  }
+  .first-div {
+    text-align: center;
+    padding: 1em;
+  }
+  .first-div h1 {
+    font-weight: 300;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+  .first-div p {
+    font-size: 1em;
+    font-family: "Alata";
+    color: hsl(0deg, 0%, 41%);
+  }
+  .first-div img {
+    width: 80%;
+  }
+  .second-div {
+    display: flex;
+    flex-direction: column;
+  }
+  .second-div h1 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .second-div .button {
+    margin: 1em 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .second-div .button button {
+    border: 2px solid black;
+    width: 40%;
+    background: white;
+    font-family: "Alata", sans-serif;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 0.6em;
+  }
+  .second-div .button-one {
+    display: none;
+  }
+  .second-div button:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    transition: ease-in-out 0.1s;
+  }
+  .second-div .creations > li:hover {
+    opacity: 0.4;
+    transition: ease-in-out 0.1s;
+  }
+  .second-div .deep {
+    background: linear-gradient(-90deg, hsla(0deg, 0%, 100%, 0.212), hsla(0deg, 0%, 0%, 0.598)), url(/images/mobile/image-deep-earth.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 1em;
+    align-items: flex-end;
+    height: 10vh;
+    color: white;
+    margin: 0.8em 1em;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: 85%;
+    font-family: "Josefin Sans", sans-serif;
+    list-style: none;
+  }
+  .second-div .night {
+    background: linear-gradient(-90deg, hsla(0deg, 0%, 100%, 0.212), hsla(0deg, 0%, 0%, 0.598)), url(/images/mobile/image-night-arcade.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 1em;
+    align-items: flex-end;
+    height: 10vh;
+    color: white;
+    margin: 0.8em 1em;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: 85%;
+    font-family: "Josefin Sans", sans-serif;
+    list-style: none;
+  }
+  .second-div .soccer {
+    background: linear-gradient(-90deg, hsla(0deg, 0%, 100%, 0.212), hsla(0deg, 0%, 0%, 0.598)), url(/images/mobile/image-soccer-team.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 1em;
+    align-items: flex-end;
+    height: 10vh;
+    color: white;
+    margin: 0.8em 1em;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: 85%;
+    font-family: "Josefin Sans", sans-serif;
+    list-style: none;
+  }
+  .second-div .grid {
+    background: linear-gradient(-90deg, hsla(0deg, 0%, 100%, 0.212), hsla(0deg, 0%, 0%, 0.598)), url(/images/mobile/image-grid.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 1em;
+    align-items: flex-end;
+    height: 10vh;
+    color: white;
+    margin: 0.8em 1em;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: 85%;
+    font-family: "Josefin Sans", sans-serif;
+    list-style: none;
+  }
+  .second-div .vr {
+    background: linear-gradient(-90deg, hsla(0deg, 0%, 100%, 0.212), hsla(0deg, 0%, 0%, 0.598)), url(/images/mobile/image-from-above.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 1em;
+    align-items: flex-end;
+    height: 10vh;
+    color: white;
+    margin: 0.8em 1em;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: 85%;
+    font-family: "Josefin Sans", sans-serif;
+    list-style: none;
+  }
+  .second-div .pocket {
+    background: linear-gradient(-90deg, hsla(0deg, 0%, 100%, 0.212), hsla(0deg, 0%, 0%, 0.598)), url(/images/mobile/image-pocket-borealis.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 1em;
+    align-items: flex-end;
+    height: 10vh;
+    color: white;
+    margin: 0.8em 1em;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: 85%;
+    font-family: "Josefin Sans", sans-serif;
+    list-style: none;
+  }
+  .second-div .curiosity {
+    background: linear-gradient(-90deg, hsla(0deg, 0%, 100%, 0.212), hsla(0deg, 0%, 0%, 0.598)), url(/images/mobile/image-curiosity.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 1em;
+    align-items: flex-end;
+    height: 10vh;
+    color: white;
+    margin: 0.8em 1em;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: 85%;
+    font-family: "Josefin Sans", sans-serif;
+    list-style: none;
+  }
+  .second-div .fish {
+    background: linear-gradient(-90deg, hsla(0deg, 0%, 100%, 0.212), hsla(0deg, 0%, 0%, 0.598)), url(/images/mobile/image-fisheye.jpg), linear-gradient(-90deg, hsl(0deg, 0%, 0%), hsl(0deg, 0%, 100%));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 1em;
+    align-items: flex-end;
+    height: 10vh;
+    color: white;
+    margin: 0.8em 1em;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    width: 85%;
+    font-family: "Josefin Sans", sans-serif;
+    list-style: none;
+  }
+  .second-div li {
+    width: 100%;
+    list-style: none;
+  }
+  .second-div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  footer {
+    background-color: hsl(0deg, 0%, 0%);
+    color: hsl(0deg, 0%, 100%);
+  }
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  footer ul > li {
+    font-family: "Alata", sans-serif;
+    margin: 0.7em;
+  }
+  footer .icons {
+    flex-direction: row;
+  }
+  footer ul > li:hover {
+    border-bottom: 3px solid white;
+    transition: ease-in-out, 2s;
+  }
+  footer em {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(0deg, 0%, 41%);
+    font-style: normal;
+  }
+  li {
+    list-style: none;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .desktop-footer {
+    display: none;
+  }
+}
+@media (min-width: 600px) {
+  .desktop-nav, h1, .second-div, .desktop-footer {
+    margin: 0em 3em;
+  }
+  main {
+    max-width: 100%;
+    border: 2px solid red;
+  }
+  body {
+    margin: 0;
+  }
+  body .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .desktop-nav > ul {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+  body .desktop-nav > ul li {
+    list-style-type: none;
+    color: white;
+    font-size: 15px;
+    padding: 1em;
+  }
+  body .desktop-nav > ul li:hover {
+    border-bottom: 2px solid white;
+  }
+  body .mobile-nav {
+    display: none;
+  }
+  body .header {
+    background-image: url(/images/desktop/image-hero.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    height: 50vh;
+  }
+  body .desktop-nav {
+    display: flex;
+  }
+  body .desktop-nav .logo {
+    width: 150px;
+    height: 20px;
+    padding: 1em 0;
+    border: 2px solid red;
+  }
+  body .h1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  body .h1 h1 {
+    padding: 0.7em;
+    font-size: 2.5em;
+    font-weight: 300;
+    border: 1px solid white;
+  }
+  body h1 {
+    font-size: 2em;
+    font-weight: 300;
+  }
+  body .first-div {
+    display: flex;
+    padding: 5em;
+  }
+  body .first-div > img {
+    width: 70%;
+  }
+  body .contents {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5em;
+    align-self: flex-end;
+    height: 50%;
+    position: relative;
+    z-index: 1;
+    right: 150px;
+    background-color: hsl(0deg, 0%, 100%);
+  }
+  body .contents > h1 {
+    text-transform: uppercase;
+  }
+  body .creations {
+    border: 2px solid green;
+    display: grid;
+    grid-area: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    height: 100vh;
+    margin: 2em;
+    padding: 2em;
+  }
+  body .deep {
+    background-image: url(/images/desktop/image-deep-earth.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  body .night {
+    background-image: url(/images/desktop/image-night-arcade.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  body .soccer {
+    background-image: url(/images/desktop/image-soccer-team.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  body .grid {
+    background-image: url(/images/desktop/image-grid.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  body .vr {
+    background-image: url(/images/desktop/image-from-above.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  body .pocket {
+    background-image: url(/images/desktop/image-pocket-borealis.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  body .curiosity {
+    background-image: url(/images/desktop/image-curiosity.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  body .fish {
+    background-image: url(/images/desktop/image-fisheye.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    list-style: none;
+    padding: 1em;
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+  }
+  .button {
+    display: none;
+  }
+  .button-one {
+    display: block;
+    padding: 1em;
+    margin: 1em 2em;
+    width: 150px;
+    border: 2px solid black;
+    background: white;
+    font-family: "Alata", sans-serif;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .button-one:hover {
+    background-color: black;
+    color: white;
+  }
+  .second-div > .next {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mobile-footer {
+    display: none;
+  }
+  .desktop-footer {
+    border: 2px solid red;
+    color: hsl(0deg, 0%, 100%);
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 70px;
+  }
+  .desktop-footer-gen {
+    background-color: black;
+  }
+  .desktop-footer > ul {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid blue;
+    width: 70%;
+    padding: 0;
+  }
+  .icons, .icons ~ em {
+    grid-column: 2/-1;
+  }
+  .icons ~ em {
+    width: 50%;
+  }
+}
+li {
+  list-style: none;
+}
+
+@media screen and (min-width: 1120px) {
+  .creations {
+    margin: 7em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
