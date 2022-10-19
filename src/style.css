@@ -420,7 +420,7 @@
     background-color: hsl(0deg, 0%, 100%);
   }
   body .contents > p {
-    font-weight: "Alata", sans-serif;
+    font-family: "Alata", sans-serif;
     font-size: 14px;
     line-height: 1.5em;
   }

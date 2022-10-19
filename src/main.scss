@@ -403,8 +403,8 @@ main{
         right: 160px;
         background-color: $White;
       }
-      .contents >p{
-        font-weight: $font-family2;
+      .contents > p{
+        font-family: $font-family2;
         font-size: 14px;
         line-height: $h2;
       }
